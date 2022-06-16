@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HappyPaws4</string>
+    <string name="title_home">Home</string>
+    <string name="title_store">Store</string>
+    <string name="title_profile">Profile</string>
+
+</resources>

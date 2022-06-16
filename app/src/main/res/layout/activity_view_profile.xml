@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".View_Profile">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/backround_shape_top">
+
+        <ImageView
+            android:layout_width="74dp"
+            android:layout_height="69dp"
+            android:layout_marginStart="-30dp"
+            android:layout_marginTop="33dp"
+            android:src="@drawable/ic_circle_ellipse_pink_50" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="45dp"
+            android:textSize="26dp"
+            android:fontFamily="@font/montserrat_bold"/>
+
+        <ImageView
+            android:layout_width="102dp"
+            android:layout_height="95dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="-20dp"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/ic_circle_ellipse_pink_50" />
+
+        <ImageView
+            android:layout_width="58dp"
+            android:layout_height="54dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="-30dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/ic_circle_ellipse_purple_37" />
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_user"
+                android:layout_width="116dp"
+                android:layout_height="116dp"
+                android:layout_marginTop="95dp"
+                android:src="@drawable/example_profile_user"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/btn_purple"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="bottom"
+                android:src="@drawable/edit_profile_button" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ellipse_pink_74"
+            android:paddingVertical="10dp"
+            android:layout_below="@+id/linear1"
+            android:layout_marginHorizontal="100dp"
+            android:layout_marginVertical="15dp">
+
+            <TextView
+                android:id="@+id/textUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Maudy Ayunda"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ellipse_pink_74"
+            android:layout_below="@+id/relative_username"
+            android:paddingVertical="10dp"
+            android:layout_marginHorizontal="100dp"
+            android:layout_marginBottom="18dp">
+
+            <TextView
+                android:id="@+id/textEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="MaudyAyunda@gmail.com"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Pets"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="33dp"
+        android:textSize="26dp"
+        android:fontFamily="@font/montserrat_bold"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:scrollbars="none"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="16dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="177dp"
+                android:layout_height="209dp"
+                app:strokeColor="@color/card_view_ellipse_purple_60"
+                android:backgroundTint="@color/card_view_ellipse_purple_60"
+                android:background="@color/card_view_ellipse_purple_60"
+                app:cardBackgroundColor="@color/card_view_ellipse_purple_60"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="7dp">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/xcard_profile_pets"
+                        android:layout_width="163dp"
+                        android:layout_height="120dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/roundimageview"
+                        android:src="@drawable/example_profile_pets"/>
+
+                    <TextView
+                        android:id="@+id/name_pets"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/xcard_profile_pets"
+                        android:text="Chiki"
+                        android:textSize="16dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textColor="@color/text"/>
+
+                    <TextView
+                        android:id="@+id/type_pets"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Abyssinian cat"
+                        android:textSize="12dp"
+                        android:layout_below="@+id/name_pets"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/black"/>
+
+                    <RelativeLayout
+                        android:id="@+id/age_pets"
+                        android:layout_below="@+id/type_pets"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/age_month_pets"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="08"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Month"
+                            android:textColor="@color/black"
+                            android:textSize="12dp" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/gender_pets"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Female"
+                        android:textSize="12dp"
+                        android:layout_below="@+id/age_pets"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/black"/>
+
+                    <ImageView
+                        android:id="@+id/edit_pets_button"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/edit_edit" />
+
+                </RelativeLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</LinearLayout>
